@@ -1,10 +1,12 @@
 //BUSINESS LOGIC
-function Pizza(size, toppings) {
+function Pizza(name, size, toppings) {
+  this.name = name;
   this.size = size;
   this.toppings = toppings;
 }
 
 toppingsArray = []
+
 
 // USER LOGIC
 $(function() {
@@ -16,6 +18,10 @@ $(function() {
       toppingsArray.push(orderTopping);
     });
     console.log(toppingsArray);
+
+    var pizza = new Pizza(orderName, orderSize, toppingsArray);
+
+    console.log(pizza);
     event.preventDefault();
   });
 });
