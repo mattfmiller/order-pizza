@@ -15,24 +15,29 @@
           <label for="order-name">Order Name</label>
           <input type="text" class="form-control" id="order-name" placeholder="John Doe" required>
         </div>
-        <div id="size-form" class="form-group">
-          <label for="order-size">Size</label>
-          <select class="form-control" id="order-size">
-            <option value='18"'>18"</option>
-            <option value='15"'>15"</option>
-            <option value='12"'>12"</option>
-          </select>
+        <div id="new-pizzas">
+          <div class="new-pizza">
+            <div class="form-group size-form">
+              <label for="order-size">Size</label>
+              <select class="form-control order-size">
+                <option value="18">18"</option>
+                <option value="15">15"</option>
+                <option value="12">12"</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="toppings">Toppings</label><br>
+              <input type="checkbox" name="topping-option" value="pepperoni">Pepperoni<br>
+              <input type="checkbox" name="topping-option" value="anchovy">Anchovy<br>
+              <input type="checkbox" name="topping-option" value="artichoke">Artichoke<br>
+              <input type="checkbox" name="topping-option" value="mushrooms">Mushrooms<br>
+              <input type="checkbox" name="topping-option" value="sausage">Sausage<br>
+              <input type="checkbox" name="topping-option" value="carmelized-onions">Carmelized Onions<br>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="toppings">Toppings</label><br>
-          <input type="checkbox" name="topping-option" value="pepperoni">Pepperoni<br>
-          <input type="checkbox" name="topping-option" value="anchovy">Anchovy<br>
-          <input type="checkbox" name="topping-option" value="artichoke">Artichoke<br>
-          <input type="checkbox" name="topping-option" value="mushrooms">Mushrooms<br>
-          <input type="checkbox" name="topping-option" value="sausage">Sausage<br>
-          <input type="checkbox" name="topping-option" value="carmelized-onions">Carmelized Onions<br>
-        </div>
-        <button type="submit" name="order-button" class="btn-secondary">Place Order</button>
+        <button type="button" class="btn-secondary"id="add-pizza">Add Pizza</button>
+        <button type="submit" name="order-button" class="btn-primary">Place Order</button>
       </form>
       <br>
       <div class="no-display">
