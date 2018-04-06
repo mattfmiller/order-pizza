@@ -11,8 +11,8 @@
     <div class="jumbotron">
       <h1>East Side Pizza</h1>
     </div>
-    <div class="container">
-      <form id="order-form">
+    <div class="container" id="order-form">
+      <form>
         <div id="name-form" class="form-group">
           <label for="order-name">Order Name</label>
           <input type="text" class="form-control" id="order-name" placeholder="John Doe">
@@ -20,7 +20,7 @@
         <div id="new-pizzas" class="row">
           <div class="new-pizza col">
             <div class="form-group size-form">
-              <label for="order-size">Size</label>
+              <label for="order-size">Size ($1 per inch)</label><br>
               <select class="order-size">
                 <option value="18">18"</option>
                 <option value="15">15"</option>
@@ -28,7 +28,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="toppings">Toppings</label><br>
+              <label for="toppings">Toppings ($1 each)</label><br>
               <input type="checkbox" name="topping-option" value="Pepperoni">Pepperoni<br>
               <input type="checkbox" name="topping-option" value="Anchovy">Anchovy<br>
               <input type="checkbox" name="topping-option" value="Artichoke">Artichoke<br>
@@ -39,15 +39,15 @@
           </div>
         </div>
         <button type="button" class="btn btn-secondary"id="add-pizza">Add Pizza</button>
-        <button type="submit" name="order-button" class="btn btn-primary">Place Order</button>
+        <button type="submit" name="order-button" class="btn btn-danger">Place Order</button>
       </form>
-      <br>
-      <div class="no-display" id="final-order">
+    </div>
+    <div class="no-display" id="final-order">
+      <div class="container">
         <h3>Thank you, for your order, <span id="order-name-output"></span>:</h3>
-        <div class="container">
-          <div id="pizza-list">
-
-          </div>
+        <div id="pizza-list">
+        </div>
+        <div id="total">
           <h5 class="float-left">Total:</h5>
           <h5 class="float-right">$<span id=order-total></span></h5>
         </div>

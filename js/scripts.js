@@ -33,7 +33,7 @@ $(function() {
   $("#add-pizza").click(function() {
     $("#new-pizzas").append('<div class="new-pizza col">' +
                               '<div class="form-group size-form">' +
-                                '<label for="order-size">Size</label>' +
+                                '<label for="order-size">Size ($1 per inch)</label><br>' +
                                 '<select class="order-size">' +
                                   '<option value="18">18"</option>' +
                                   '<option value="15">15"</option>' +
@@ -41,7 +41,7 @@ $(function() {
                                 '</select>' +
                               '</div>' +
                               '<div class="form-group">' +
-                                '<label for="toppings">Toppings</label><br>' +
+                                '<label for="toppings">Toppings ($1 each)</label><br>' +
                                 '<input type="checkbox" name="topping-option" value="Pepperoni">Pepperoni<br>' +
                                 '<input type="checkbox" name="topping-option" value="Anchovy">Anchovy<br>' +
                                 '<input type="checkbox" name="topping-option" value="Artichoke">Artichoke<br>' +
@@ -64,24 +64,22 @@ $(function() {
       });
       order.pizzas.push(pizza);
     })
-    console.log(order);
     order.total();
     $("#order-name-output").text(orderName);
-    $("#order-total").text(orderTotal);
     for (var i = 0; i < order.pizzas.length; i++) {
       $("#pizza-list").append('<div class = "pizza-list-item">' +
-                                '<h6 class="float-left">' + order.pizzas[i].size + '"' + ' Pizza</h6>' +
+                                '<h6 class="float-left link">' + order.pizzas[i].size + '"' + ' Pizza</h6>' +
                                 '<h6 class="float-right">$' + order.pizzas[i].price() + '</h6><br>' +
                                 '<p class="no-display">Toppings: ' + order.pizzas[i].toppings.toString().replace(",", ", ") +
                                 '<p>');
     }
+    $("#order-total").text(orderTotal);
     $("#final-order").fadeIn();
-    orderTotal = 0;
     $("#order-form").hide();
-
     $(".pizza-list-item").click(function() {
       $(this).find(".no-display").slideToggle();
     });
+    orderTotal = 0;
     event.preventDefault();
   });
 });
