@@ -15,11 +15,11 @@
           <label for="order-name">Order Name</label>
           <input type="text" class="form-control" id="order-name" placeholder="John Doe">
         </div>
-        <div id="new-pizzas">
-          <div class="new-pizza">
+        <div id="new-pizzas" class="row">
+          <div class="new-pizza col">
             <div class="form-group size-form">
               <label for="order-size">Size</label>
-              <select class="form-control order-size">
+              <select class="order-size">
                 <option value="18">18"</option>
                 <option value="15">15"</option>
                 <option value="12">12"</option>
@@ -41,7 +41,20 @@
       </form>
       <br>
       <div class="no-display">
-        <h3>Total: $<span id=order-total></span></h3>
+        <h3>Thank you, for your order, <span id="order-name-output"></span>:</h3>
+        <div class="row">
+          <div class="col">
+            <ul id="pizza-list">
+
+            </ul>
+          </div>
+          <div class="col">
+            <ul id="price-list">
+
+            </ul>
+          </div>
+        </div>
+        <h4>Total: $<span id=order-total></span></h4>
       </div>
     </div>
   </body>

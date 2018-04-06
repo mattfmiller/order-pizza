@@ -31,10 +31,10 @@ Order.prototype.total = function() {
 // USER LOGIC
 $(function() {
   $("#add-pizza").click(function() {
-    $("#new-pizzas").append('<div class="new-pizza">' +
+    $("#new-pizzas").append('<div class="new-pizza col">' +
                               '<div class="form-group size-form">' +
                                 '<label for="order-size">Size</label>' +
-                                '<select class="form-control order-size">' +
+                                '<select class="order-size">' +
                                   '<option value="18">18"</option>' +
                                   '<option value="15">15"</option>' +
                                   '<option value="12">12"</option>' +
@@ -66,9 +66,15 @@ $(function() {
     })
     console.log(order);
     order.total();
+    $("#order-name-output").text(orderName);
     $("#order-total").text(orderTotal);
+    for (var i = 0; i < order.pizzas.length; i++) {
+      $("#pizza-list").append("<li>" + order.pizzas[i].size + '"' + "</li>");
+      $("#price-list").append("<li>$" + order.pizzas[i].price()) + "<li>";
+    }
     $(".no-display").fadeIn();
     orderTotal = 0;
+    $(".form-group").hide();
     event.preventDefault();
   });
 });
