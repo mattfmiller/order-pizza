@@ -77,10 +77,10 @@ $(function() {
     }
     $("#final-order").fadeIn();
     orderTotal = 0;
-    $("order-form").hide();
+    $("#order-form").hide();
 
     $(".pizza-list-item").click(function() {
-      $(this).find(".no-display").toggle();
+      $(this).find(".no-display").slideToggle();
     });
     event.preventDefault();
   });
