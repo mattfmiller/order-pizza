@@ -5,6 +5,10 @@ function Pizza(name, size, toppings) {
   this.toppings = toppings;
 }
 
+Pizza.prototype.total = function() {
+  return "$18"
+}
+
 toppingsArray = []
 
 
@@ -17,11 +21,10 @@ $(function() {
       var orderTopping = $(this).val();
       toppingsArray.push(orderTopping);
     });
-    console.log(toppingsArray);
-
     var pizza = new Pizza(orderName, orderSize, toppingsArray);
-
-    console.log(pizza);
+    var orderTotal = pizza.total();
+    $("#order-total").text(orderTotal);
+    $(".no-display").fadeIn();
     event.preventDefault();
   });
 });
