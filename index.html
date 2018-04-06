@@ -12,25 +12,26 @@
       <h1>Ralph's Pizza Emporium</h1>
       <form id="order-form">
         <div id="name-form" class="form-group">
-          <label for="name">Order Name</label>
-          <input type="text" class="form-control" id="user-name" placeholder="John Doe" required>
+          <label for="order-name">Order Name</label>
+          <input type="text" class="form-control" id="order-name" placeholder="John Doe" required>
         </div>
-        <div id="sixe-form" class="form-group">
-          <label for="size">Size</label>
-          <select class="form-control" name="size">
+        <div id="size-form" class="form-group">
+          <label for="order-size">Size</label>
+          <select class="form-control" id="order-size">
             <option value='18"'>18"</option>
             <option value='12"'>12"</option>
           </select>
         </div>
         <div class="form-group">
           <label for="toppings">Toppings</label><br>
-          <input type="checkbox"  value="pepperoni">Pepperoni<br>
-          <input type="checkbox"  value="anchovy">Anchovy<br>
-          <input type="checkbox"  value="artichoke">Artichoke<br>
-          <input type="checkbox"  value="mushrooms">Mushrooms<br>
-          <input type="checkbox"  value="sausage">Sausage<br>
-          <input type="checkbox"  value="carmelized-onions">Carmelized Onions<br>
+          <input type="checkbox" name="topping-option" value="pepperoni">Pepperoni<br>
+          <input type="checkbox" name="topping-option" value="anchovy">Anchovy<br>
+          <input type="checkbox" name="topping-option" value="artichoke">Artichoke<br>
+          <input type="checkbox" name="topping-option" value="mushrooms">Mushrooms<br>
+          <input type="checkbox" name="topping-option" value="sausage">Sausage<br>
+          <input type="checkbox" name="topping-option" value="carmelized-onions">Carmelized Onions<br>
         </div>
+        <button type="submit" name="order-button" class="btn-secondary">Place Order</button>
       </form>
       <div class="no-display">
         <h3>Total: <span id=order-total></span></h3>
