@@ -7,9 +7,9 @@ function Pizza(name, size, toppings) {
 
 Pizza.prototype.total = function() {
   if (this.size === '18"') {
-    return "$18"
+    return "$" + (18 + this.toppings.length);
   } else if (this.size === '12"') {
-    return "$12"
+    return "$" + (12 + this.toppings.length);
   }
 
 }

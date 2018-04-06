@@ -15,7 +15,6 @@ This webpage allows users to choose pizza options and returns a total cost.
 | Program will return a total of $18 for one 18" pizza | Input: 18" Pizza | Output: $18 |
 | Program will return a total of $12 for one 12" pizza | Input: 12" Pizza | Output: $12 |
 | Program will add $1 for an additional topping | Input: 18" w/ pepperoni | Output: $19 |
-| Program will add $2 for two additional toppings | Input: 12" w/ pepperoni and anchovies | Output: $14 |
 <!-- | Program will allow ordering of additional pizza | Input: 18" w/ pepperoni & 12" w/ pepperoni and anchovies | Output: $33 | -->
 
 ## Setup/Installation Requirements
