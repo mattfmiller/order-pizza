@@ -9,14 +9,23 @@ function Pizza(size, toppings) {
   this.toppings = [];
 }
 
-Pizza.prototype.total = function() {
+Pizza.prototype.price = function() {
   if (this.size === "18") {
-    return "$" + (18 + this.toppings.length);
+    return 18 + this.toppings.length;
   }
   else if (this.size === "15") {
-    return "$" + (15 + this.toppings.length);
+    return 15 + this.toppings.length;
   } else if (this.size === "12") {
-    return "$" + (12 + this.toppings.length);
+    return 12 + this.toppings.length;
+  }
+}
+
+var orderTotal = 0
+
+var pizzaPriceArray = [];
+Order.prototype.total = function() {
+  for (var i = 0; i < this.pizzas.length; i++) {
+    orderTotal += this.pizzas[i].price();
   }
 }
 
@@ -57,18 +66,18 @@ $(function() {
       });
       order.pizzas.push(pizza);
     })
-
-    // console.log(pizza);
     console.log(order);
-
-
-    // var orderTotal = pizza.total();
-    // $("#order-total").text(orderTotal);
-    // $(".no-display").fadeIn();
+    order.total();
+    $("#order-total").text(orderTotal);
+    $(".no-display").fadeIn();
+    orderTotal = 0;
     event.preventDefault();
   });
 });
 
+// var orderTotal = order.total();
+// $("#order-total").text(orderTotal);
+// $(".no-display").fadeIn();
 
 // var orderSize = $(".order-size").val();
 // var pizza = new Pizza(orderSize);
