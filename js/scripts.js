@@ -1,4 +1,6 @@
 //BUSINESS LOGIC
+var orderTotal = 0
+
 function Order(name, pizzas) {
   this.name = name;
   this.pizzas = [];
@@ -12,17 +14,13 @@ function Pizza(size, toppings) {
 Pizza.prototype.price = function() {
   if (this.size === "18") {
     return 18 + this.toppings.length;
-  }
-  else if (this.size === "15") {
+  } else if (this.size === "15") {
     return 15 + this.toppings.length;
   } else if (this.size === "12") {
     return 12 + this.toppings.length;
   }
 }
 
-var orderTotal = 0
-
-var pizzaPriceArray = [];
 Order.prototype.total = function() {
   for (var i = 0; i < this.pizzas.length; i++) {
     orderTotal += this.pizzas[i].price();
@@ -74,15 +72,3 @@ $(function() {
     event.preventDefault();
   });
 });
-
-// var orderTotal = order.total();
-// $("#order-total").text(orderTotal);
-// $(".no-display").fadeIn();
-
-// var orderSize = $(".order-size").val();
-// var pizza = new Pizza(orderSize);
-// $("input:checkbox[name=topping-option]:checked").each(function(){
-//   var orderTopping = $(this).val();
-//   pizza.toppings.push(orderTopping);
-// });
-// order.pizzas.push(pizza);
