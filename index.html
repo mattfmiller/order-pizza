@@ -5,11 +5,13 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
-    <title>Ralph's Pizza Emporium</title>
+    <title>East Side Pizza</title>
   </head>
   <body>
+    <div class="jumbotron">
+      <h1>East Side Pizza</h1>
+    </div>
     <div class="container">
-      <h1>Ralph's Pizza Emporium</h1>
       <form id="order-form">
         <div id="name-form" class="form-group">
           <label for="order-name">Order Name</label>
@@ -36,8 +38,8 @@
             </div>
           </div>
         </div>
-        <button type="button" class="btn-secondary"id="add-pizza">Add Pizza</button>
-        <button type="submit" name="order-button" class="btn-primary">Place Order</button>
+        <button type="button" class="btn btn-secondary"id="add-pizza">Add Pizza</button>
+        <button type="submit" name="order-button" class="btn btn-primary">Place Order</button>
       </form>
       <br>
       <div class="no-display" id="final-order">
@@ -46,15 +48,8 @@
           <div id="pizza-list">
 
           </div>
-          <!-- <div id="price-list" class="col">
-
-          </div> -->
-        </div>
-        <div class="container">
           <h5 class="float-left">Total:</h5>
-        </div>
-        <div class="col">
-            <h5 class="float-right">$<span id=order-total></span></h5>
+          <h5 class="float-right">$<span id=order-total></span></h5>
         </div>
       </div>
     </div>
