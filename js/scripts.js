@@ -6,7 +6,12 @@ function Pizza(name, size, toppings) {
 }
 
 Pizza.prototype.total = function() {
-  return "$18"
+  if (this.size === '18"') {
+    return "$18"
+  } else if (this.size === '12"') {
+    return "$12"
+  }
+
 }
 
 toppingsArray = []
