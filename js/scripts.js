@@ -70,7 +70,7 @@ $(function() {
       $("#pizza-list").append('<div class = "pizza-list-item">' +
                                 '<h6 class="float-left link">' + order.pizzas[i].size + '"' + ' Pizza</h6>' +
                                 '<h6 class="float-right">$' + order.pizzas[i].price() + '</h6><br>' +
-                                '<p class="no-display">Toppings: ' + order.pizzas[i].toppings.toString().replace(",", ", ") +
+                                '<p class="no-display">Toppings: ' + order.pizzas[i].toppings.toString().replace(/,/g, ", ") +
                                 '<p>');
     }
     $("#order-total").text(orderTotal);
